@@ -1,0 +1,11 @@
+a set of useful functions can be used fo strings manupilation, byte manupilation and linked list.
+USAGE:
+  run "make" to make the library "libft.a".
+  run "make bonus" to make objects for linked list.
+  run "make fclean" to delete the objects and library.
+  run "make re" to delete everyting and rebuid it.
+NOTICE:
+  some functuion might work a bit different than the original ones due to macos
+  example : memcpy doesn`t handle the overlap USE MEMMOVE.
+
+more updates coming to the library including additional functions ...
