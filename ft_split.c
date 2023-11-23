@@ -62,13 +62,15 @@ static char	**splitor(char const *s, char c, char **arr, size_t len)
 		while (s[j] && s[j] == c)
 			j++;
 		arr[i] = ft_substr(s, j, (lenght(s + j, c)));
-		if (!arr[i])
+		if (!arr[i] && i)
 		{
+			i--;//to start freeing from the previous allocated word and not the null
 			while (i >= 0)
 			{
 				free(arr[i]);
 				if (i == 0)
 					break;
+				i--;
 			}
 			free(arr);
 			return (NULL);
