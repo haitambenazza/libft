@@ -64,8 +64,12 @@ static char	**splitor(char const *s, char c, char **arr, size_t len)
 		arr[i] = ft_substr(s, j, (lenght(s + j, c)));
 		if (!arr[i])
 		{
-			while (i--)
+			while (i >= 0)
+			{
 				free(arr[i]);
+				if (i == 0)
+					break;
+			}
 			free(arr);
 			return (NULL);
 		}
